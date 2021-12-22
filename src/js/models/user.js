@@ -14,11 +14,15 @@ module.exports = function(sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING(45),
       allowNull: true
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      allowNull: true
     }
   }, {
     sequelize,
     tableName: 'users',
-    timestamps: true,
+    timestamps: false,
     indexes: [
       {
         name: "PRIMARY",
